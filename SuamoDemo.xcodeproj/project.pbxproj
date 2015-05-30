@@ -16,7 +16,8 @@
 		207715591B18477D00941F89 /* Suamo__WaveSpread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207715581B18477D00941F89 /* Suamo__WaveSpread.swift */; };
 		207715661B184D1F00941F89 /* Suamo__Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207715641B184D1F00941F89 /* Suamo__Hud.swift */; };
 		207715671B184D1F00941F89 /* Suamo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 207715651B184D1F00941F89 /* Suamo.bundle */; };
-		2077156F1B1871BB00941F89 /* WsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077156E1B1871BB00941F89 /* WsView.swift */; };
+		209C81E01B19D80C00CF1F88 /* HudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209C81DF1B19D80C00CF1F88 /* HudViewController.swift */; };
+		209C81E21B19D90700CF1F88 /* Suamo__ToolsFuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209C81E11B19D90700CF1F88 /* Suamo__ToolsFuc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,8 @@
 		207715581B18477D00941F89 /* Suamo__WaveSpread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suamo__WaveSpread.swift; sourceTree = "<group>"; };
 		207715641B184D1F00941F89 /* Suamo__Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suamo__Hud.swift; sourceTree = "<group>"; };
 		207715651B184D1F00941F89 /* Suamo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Suamo.bundle; sourceTree = "<group>"; };
-		2077156E1B1871BB00941F89 /* WsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsView.swift; sourceTree = "<group>"; };
+		209C81DF1B19D80C00CF1F88 /* HudViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudViewController.swift; sourceTree = "<group>"; };
+		209C81E11B19D90700CF1F88 /* Suamo__ToolsFuc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suamo__ToolsFuc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 				207715311B18407400941F89 /* AppDelegate.swift */,
 				207715561B18455100941F89 /* ViewController.swift */,
 				207715351B18407400941F89 /* Main.storyboard */,
-				2077156E1B1871BB00941F89 /* WsView.swift */,
+				209C81DF1B19D80C00CF1F88 /* HudViewController.swift */,
 				207715381B18407400941F89 /* Images.xcassets */,
 				2077153A1B18407400941F89 /* LaunchScreen.xib */,
 				2077152F1B18407400941F89 /* Supporting Files */,
@@ -128,6 +130,7 @@
 				207715651B184D1F00941F89 /* Suamo.bundle */,
 				207715641B184D1F00941F89 /* Suamo__Hud.swift */,
 				207715581B18477D00941F89 /* Suamo__WaveSpread.swift */,
+				209C81E11B19D90700CF1F88 /* Suamo__ToolsFuc.swift */,
 			);
 			path = Suamo__Tools;
 			sourceTree = "<group>";
@@ -233,11 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2077156F1B1871BB00941F89 /* WsView.swift in Sources */,
 				207715571B18455100941F89 /* ViewController.swift in Sources */,
 				207715321B18407400941F89 /* AppDelegate.swift in Sources */,
+				209C81E21B19D90700CF1F88 /* Suamo__ToolsFuc.swift in Sources */,
 				207715591B18477D00941F89 /* Suamo__WaveSpread.swift in Sources */,
 				207715661B184D1F00941F89 /* Suamo__Hud.swift in Sources */,
+				209C81E01B19D80C00CF1F88 /* HudViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

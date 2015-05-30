@@ -68,14 +68,14 @@ extension UIView{
     }
     
     
-    private func inflateAnimatedFromPoint(point x:CGPoint,backgroundcolor y:UIColor,duration z:NSTimeInterval,completion :(()->Void)){
+    func inflateAnimatedFromPoint(point x:CGPoint,backgroundcolor y:UIColor,duration z:NSTimeInterval,completion :(()->Void)){
         self.animatedAtPoint(point: x, backgroundColor: y, duration: z, inflating: true, zTopPosition: false, shapelayer: nil) { () -> Void in
             completion()
         }
 
     }
     
-    private func deflateAnimatedToPoint(point x:CGPoint,backgroundcolor y:UIColor,duration z:NSTimeInterval,completion :(()->Void)){
+    func deflateAnimatedToPoint(point x:CGPoint,backgroundcolor y:UIColor,duration z:NSTimeInterval,completion :(()->Void)){
         self.animatedAtPoint(point: x, backgroundColor: y, duration: z, inflating: false, zTopPosition: false, shapelayer: nil) { () -> Void in
             completion()
         }
