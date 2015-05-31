@@ -16,18 +16,86 @@
                     <view key="view" contentMode="scaleToFill" id="Qsc-73-kau">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At4-Qq-7vi">
+                                <rect key="frame" x="16" y="72" width="568" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Bc8-bh-Kjl"/>
+                                </constraints>
+                                <state key="normal" title="show(States x:String)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="show:" destination="Y1j-fa-8Wd" eventType="touchUpInside" id="swC-rN-R4a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-EL-g4U">
+                                <rect key="frame" x="16" y="130" width="568" height="50"/>
+                                <state key="normal" title="showSuccess(Status x: String)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSuccess:" destination="Y1j-fa-8Wd" eventType="touchUpInside" id="kUV-zd-8bs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbM-w3-bBq">
+                                <rect key="frame" x="16" y="188" width="568" height="50"/>
+                                <state key="normal" title="showError(Status x:String)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showError:" destination="Y1j-fa-8Wd" eventType="touchUpInside" id="hGH-2H-uim"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj6-32-6c2">
+                                <rect key="frame" x="16" y="246" width="568" height="50"/>
+                                <state key="normal" title="dismiss()">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="Y1j-fa-8Wd" eventType="touchUpInside" id="oCK-oc-IMO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cc2-EL-g4U" firstAttribute="top" secondItem="At4-Qq-7vi" secondAttribute="bottom" constant="8" id="9Rt-Od-TEq"/>
+                            <constraint firstItem="XbM-w3-bBq" firstAttribute="leading" secondItem="Qsc-73-kau" secondAttribute="leadingMargin" id="Nch-l1-xUb"/>
+                            <constraint firstItem="hj6-32-6c2" firstAttribute="height" secondItem="At4-Qq-7vi" secondAttribute="height" id="OsB-7k-ihH"/>
+                            <constraint firstItem="At4-Qq-7vi" firstAttribute="top" secondItem="pJl-l9-jqF" secondAttribute="bottom" constant="8" id="YPq-T8-e0B"/>
+                            <constraint firstItem="cc2-EL-g4U" firstAttribute="trailing" secondItem="Qsc-73-kau" secondAttribute="trailingMargin" id="YgV-Hv-iQI"/>
+                            <constraint firstItem="At4-Qq-7vi" firstAttribute="leading" secondItem="Qsc-73-kau" secondAttribute="leadingMargin" id="ZaF-Sz-Oh0"/>
+                            <constraint firstItem="hj6-32-6c2" firstAttribute="leading" secondItem="Qsc-73-kau" secondAttribute="leadingMargin" id="bAh-8d-3zR"/>
+                            <constraint firstItem="XbM-w3-bBq" firstAttribute="top" secondItem="cc2-EL-g4U" secondAttribute="bottom" constant="8" id="cVh-Xy-vaq"/>
+                            <constraint firstItem="hj6-32-6c2" firstAttribute="height" secondItem="cc2-EL-g4U" secondAttribute="height" id="kZP-0z-Mrp"/>
+                            <constraint firstItem="hj6-32-6c2" firstAttribute="height" secondItem="XbM-w3-bBq" secondAttribute="height" id="mAn-zj-OGd"/>
+                            <constraint firstItem="hj6-32-6c2" firstAttribute="trailing" secondItem="Qsc-73-kau" secondAttribute="trailingMargin" id="pbm-Rw-q4u"/>
+                            <constraint firstItem="XbM-w3-bBq" firstAttribute="trailing" secondItem="Qsc-73-kau" secondAttribute="trailingMargin" id="psy-ed-PTu"/>
+                            <constraint firstItem="At4-Qq-7vi" firstAttribute="trailing" secondItem="Qsc-73-kau" secondAttribute="trailingMargin" id="r6q-Q3-jku"/>
+                            <constraint firstItem="cc2-EL-g4U" firstAttribute="leading" secondItem="Qsc-73-kau" secondAttribute="leadingMargin" id="zRZ-uI-7HK"/>
+                            <constraint firstItem="hj6-32-6c2" firstAttribute="top" secondItem="XbM-w3-bBq" secondAttribute="bottom" constant="8" id="zdW-eR-vKs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Suamo__Hud" id="xtz-JK-tki"/>
+                    <connections>
+                        <outlet property="btn1" destination="At4-Qq-7vi" id="b0N-st-c5t"/>
+                        <outlet property="btn3" destination="cc2-EL-g4U" id="Uyc-Oe-UIe"/>
+                        <outlet property="btn5" destination="XbM-w3-bBq" id="eZB-sp-d5C"/>
+                        <outlet property="btn7" destination="hj6-32-6c2" id="cFB-ks-mgJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kud-Xg-c5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1987" y="-326"/>
         </scene>
-        <!--Suamo__WavaSpread-->
+        <!--Suamo__LockVc-->
         <scene sceneID="olE-rA-deO">
             <objects>
-                <viewController id="OYd-3b-YGa" sceneMemberID="viewController">
+                <viewController id="OYd-3b-YGa" customClass="DrugViewController" customModule="SuamoDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3H-5o-fti"/>
                         <viewControllerLayoutGuide type="bottom" id="8Zn-oZ-ZEb"/>
@@ -35,9 +103,58 @@
                     <view key="view" contentMode="scaleToFill" id="v33-Cz-wfU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-Rf-rBB">
+                                <rect key="frame" x="16" y="542" width="568" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ncn-mB-Es4"/>
+                                </constraints>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeZ-KR-ql0">
+                                <rect key="frame" x="16" y="484" width="568" height="50"/>
+                                <state key="normal" title="Test Password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkq-bq-yv6">
+                                <rect key="frame" x="16" y="426" width="568" height="50"/>
+                                <state key="normal" title="Set Password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1z-0q-dj6">
+                                <rect key="frame" x="16" y="72" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.84705882349999995" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b6M-DB-hWL"/>
+                                    <constraint firstAttribute="width" constant="60" id="mVP-Rw-6UY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Zn-oZ-ZEb" firstAttribute="top" secondItem="mDk-Rf-rBB" secondAttribute="bottom" constant="8" id="4kb-UY-hvw"/>
+                            <constraint firstItem="mDk-Rf-rBB" firstAttribute="height" secondItem="zeZ-KR-ql0" secondAttribute="height" id="Gxw-Vo-Pbv"/>
+                            <constraint firstItem="zeZ-KR-ql0" firstAttribute="leading" secondItem="v33-Cz-wfU" secondAttribute="leadingMargin" id="H0Q-dc-Gl1"/>
+                            <constraint firstItem="mDk-Rf-rBB" firstAttribute="top" secondItem="zeZ-KR-ql0" secondAttribute="bottom" constant="8" id="MvA-Qj-8Nn"/>
+                            <constraint firstItem="S1z-0q-dj6" firstAttribute="leading" secondItem="v33-Cz-wfU" secondAttribute="leadingMargin" id="OKy-l9-QzD"/>
+                            <constraint firstItem="Zkq-bq-yv6" firstAttribute="trailing" secondItem="v33-Cz-wfU" secondAttribute="trailingMargin" id="UAH-s6-A1E"/>
+                            <constraint firstItem="mDk-Rf-rBB" firstAttribute="leading" secondItem="v33-Cz-wfU" secondAttribute="leadingMargin" id="XHY-8V-OLP"/>
+                            <constraint firstItem="zeZ-KR-ql0" firstAttribute="trailing" secondItem="v33-Cz-wfU" secondAttribute="trailingMargin" id="YZ0-uO-23g"/>
+                            <constraint firstItem="S1z-0q-dj6" firstAttribute="top" secondItem="y3H-5o-fti" secondAttribute="bottom" constant="8" id="ad7-6e-H1I"/>
+                            <constraint firstItem="mDk-Rf-rBB" firstAttribute="trailing" secondItem="v33-Cz-wfU" secondAttribute="trailingMargin" id="cP9-0S-Z8B"/>
+                            <constraint firstItem="mDk-Rf-rBB" firstAttribute="height" secondItem="Zkq-bq-yv6" secondAttribute="height" id="hDF-ym-nKJ"/>
+                            <constraint firstItem="zeZ-KR-ql0" firstAttribute="top" secondItem="Zkq-bq-yv6" secondAttribute="bottom" constant="8" id="imh-kG-ARe"/>
+                            <constraint firstItem="Zkq-bq-yv6" firstAttribute="leading" secondItem="v33-Cz-wfU" secondAttribute="leadingMargin" id="oYg-U7-aQl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Suamo__WavaSpread" id="ulw-UC-Pw4"/>
+                    <navigationItem key="navigationItem" title="Suamo__LockVc" id="ulw-UC-Pw4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjD-WY-4gi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,14 +181,14 @@
                             </button>
                             <button opaque="NO" tag="10002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-qR-4I0">
                                 <rect key="frame" x="16" y="160" width="568" height="80"/>
-                                <state key="normal" title="Suamo__Ws">
+                                <state key="normal" title="Suamo__LockVc">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-W5-tWt">
                                 <rect key="frame" x="16" y="248" width="568" height="80"/>
-                                <state key="normal">
+                                <state key="normal" title="Suamo_LockVc">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Suamo__Hud.showSuccess(Status: "Welcome to Suamo", Interaction: true)
+//        Suamo__Hud.showSuccess(Status: "Welcome to Suamo", Interaction: false)
         
         self.view.backgroundColor = randomColor()
         
@@ -37,11 +37,11 @@ class ViewController: UIViewController {
         var touchPosition : CGPoint = tap.locationInView(self.view)
         
         if randomNumber0_i(endNumber: nil) > 0.5 {
-            self.view.inflateAnimatedFromPoint(point: touchPosition, backgroundcolor: randomColor(), duration: 0.75, completion: { () -> Void in
+            self.view.inflateAnimatedFromPoint(point: touchPosition, backgroundcolor: randomColor(), duration: 0.4, completion: { () -> Void in
                 
             })
         }else{
-            self.view.deflateAnimatedToPoint(point: touchPosition, backgroundcolor: randomColor(), duration: 0.75, completion: { () -> Void in
+            self.view.deflateAnimatedToPoint(point: touchPosition, backgroundcolor: randomColor(), duration: 0.4, completion: { () -> Void in
                 
             })
         }
@@ -50,6 +50,7 @@ class ViewController: UIViewController {
 
     func showOtherView(sender:UIButton, event:UIEvent){
         if sender.tag == 10001{
+            
             self.performSegueWithIdentifier("hudAction", sender: nil)
         }else if sender.tag == 10002{
             self.performSegueWithIdentifier("wsAction", sender: nil)

@@ -1,24 +1,42 @@
 //
-//  Suamo__WaveSpread.swift
+//  Suamo(UiView).swift
 //  SuamoDemo
 //
-//  Created by kiddopal on 15/5/29.
+//  Created by kiddopal on 15/5/31.
 //  Copyright (c) 2015年 Suamo. All rights reserved.
 //
 
 import UIKit
 
+//--------------------------------------------------
+//-.-!  Suamo_WaveSpread's let
 let Suamo__WaveSpread_TransitionDuration = 0.65
+//--------------------------------------------------
 
 extension UIView{
+    //--------------------------------------------------
+    //-.-!  Suamo_WaveSpread
+    //MARK: Suamo_WaveSpread
+    //--------------------------------------------------
     
+    /**
+    inflate means out to in
+    use this func to switch view. like:
+    UIView.Suamo__InflateWaveSpread(fromView: aView, toView: bView, originalPoint: touchePosition, duration: 1.5) { () -> Void in
+    }
+    
+    :param: x          now view
+    :param: y          to view
+    :param: z          user's touch point or start animate point
+    :param: w          duration
+    :param: completion completion()
+    */
     static func Suamo__InflateWaveSpread(fromView x:UIView!, toView y:UIView!,originalPoint z:CGPoint!,duration w:NSTimeInterval!,completion :(() -> Void)){
         if x.superview != nil{
             var containerView : UIView = x.superview!
             var convertedPoint :CGPoint = x.convertPoint(z, fromView: x)
             
             containerView.layer.masksToBounds = true
-            
             containerView.animatedAtPoint(point: convertedPoint, backgroundColor: y.backgroundColor!, duration: w * Suamo__WaveSpread_TransitionDuration, inflating: true, zTopPosition: true, shapelayer: nil, completion: { () -> Void in
                 y.alpha = 0
                 
@@ -30,8 +48,8 @@ extension UIView{
                 
                 UIView.animateWithDuration(animationDuration, animations: { () -> Void in
                     y.alpha = 1
-                }, completion: { (Bool) -> Void in
-                    completion()
+                    }, completion: { (Bool) -> Void in
+                        completion()
                 })
                 
             })
@@ -41,6 +59,18 @@ extension UIView{
         
     }
     
+    /**
+    deflate means out to in
+    use this func to switch view. like:
+    UIView.Suamo__DeflateWaveSpread(fromView: aView, toView: bView, originalPoint: touchePosition, duration: 1.5, completion: { () -> Void in
+    })
+    
+    :param: x          now view
+    :param: y          to view
+    :param: z          user's touch point or start animate point
+    :param: w          duration
+    :param: completion completion()
+    */
     static func Suamo__DeflateWaveSpread(fromView x:UIView!, toView y:UIView!,originalPoint z:CGPoint!,duration w:NSTimeInterval!,completion :(() -> Void)){
         if x.superview != nil{
             var containerView : UIView = x.superview!
@@ -57,24 +87,45 @@ extension UIView{
             var animationDuration = (w - w * Suamo__WaveSpread_TransitionDuration)
             UIView.animateWithDuration(animationDuration, animations: { () -> Void in
                 x.alpha = 0
-            }, completion: { (Bool) -> Void in
-                y.animatedAtPoint(point: convertedPoint, backgroundColor: x.backgroundColor!, duration: w * Suamo__WaveSpread_TransitionDuration, inflating: false, zTopPosition: true, shapelayer: layer, completion: { () -> Void in
-                    completion()
-                })
+                }, completion: { (Bool) -> Void in
+                    y.animatedAtPoint(point: convertedPoint, backgroundColor: x.backgroundColor!, duration: w * Suamo__WaveSpread_TransitionDuration, inflating: false, zTopPosition: true, shapelayer: layer, completion: { () -> Void in
+                        completion()
+                    })
             })
         }else{
             completion()
         }
     }
     
+    /**
+    inflate means in to out
+    use this func to change someview , button or others's backgroundcolor. like : 
+    btn.inflateAnimatedFromPoint(point: touchPosition, backgroundcolor: randomColor(), duration: 0.4, completion: { () -> Void in
+    })
     
+    :param: x          startPoint
+    :param: y          to color
+    :param: z          duration
+    :param: completion completion()
+    */
     func inflateAnimatedFromPoint(point x:CGPoint,backgroundcolor y:UIColor,duration z:NSTimeInterval,completion :(()->Void)){
         self.animatedAtPoint(point: x, backgroundColor: y, duration: z, inflating: true, zTopPosition: false, shapelayer: nil) { () -> Void in
             completion()
         }
-
+        
     }
     
+    /**
+    deflate means out to in
+    use this func to change someview , button or others's backgroundcolor. like :
+    btn.inflateAnimatedFromPoint(point: touchPosition, backgroundcolor: randomColor(), duration: 0.4, completion: { () -> Void in
+    })
+    
+    :param: x          startPoint
+    :param: y          to color
+    :param: z          duration
+    :param: completion completion()
+    */
     func deflateAnimatedToPoint(point x:CGPoint,backgroundcolor y:UIColor,duration z:NSTimeInterval,completion :(()->Void)){
         self.animatedAtPoint(point: x, backgroundColor: y, duration: z, inflating: false, zTopPosition: false, shapelayer: nil) { () -> Void in
             completion()
@@ -179,16 +230,6 @@ extension UIView{
                 radius = d;
             }
         }
-        
         return radius * 2.0
     }
-    
-    private func fuck(x:NSString!){
-        println("\(x)")
-        
-    }
-    
-    
-    
-    
 }

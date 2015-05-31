@@ -12,7 +12,7 @@ let Suamo__HUD_STATUS_FONT = UIFont.boldSystemFontOfSize(16)
 let Suamo__HUD_STATUS_COLOR = UIColor.blackColor()
 let Suamo__HUD_SPINNER_COLOR = UIColor(red: 185.0/255.0, green: 220.0/255.0, blue: 47.0/255.0, alpha: 1.0)
 let Suamo__HUD_BACKGROUND_COLOR = UIColor(white: 0.0, alpha: 0.1)
-let Suamo__HUD_WINDOW_COLOR = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.2)
+let Suamo__HUD_WINDOW_COLOR = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
 let Suamo__HUD_IMAGE_SUCCESS = UIImage(named: "Suamo.bundle/progresshud-success.png")
 let Suamo__HUD_IMAGE_ERROR = UIImage(named: "Suamo.bundle/progresshud-error.png")
 
@@ -92,7 +92,7 @@ public class Suamo__Hud: UIView {
     dismiss the hud
     */
     static public func dismiss(){
-        Suamo__Hud.sharedInstance.endingShowing()
+        Suamo__Hud.sharedInstance.showingEndind()
     }
 
     
@@ -165,6 +165,10 @@ public class Suamo__Hud: UIView {
             if interaction{
                 myWindow.addSubview(hud)
             }else{
+//                var temp : UIView = myWindow.subviews as! UIView
+////                var tempView = temp.
+                
+            
                 background = UIView(frame: myWindow.frame)
                 background.backgroundColor = Suamo__HUD_WINDOW_COLOR
                 myWindow.addSubview(background)
@@ -286,7 +290,7 @@ public class Suamo__Hud: UIView {
                 self.hud.transform = CGAffineTransformScale(self.hud.transform, 1/1.4, 1/1.4)
                 self.hud.alpha = 1;
                 }, completion: { (Bool) -> Void in
-                    
+//                    
             })
         }
     }
